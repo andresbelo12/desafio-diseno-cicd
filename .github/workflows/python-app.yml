@@ -22,7 +22,11 @@ jobs:
         python-version: "3.10"
     - name: Downlad Required Files
       run: |
+        ls
+        pwd
         wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1uNV9FHKqVdI5EkcZXBuuLgQw3fJ-d9Ab' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1uNV9FHKqVdI5EkcZXBuuLgQw3fJ-d9Ab" -O train_sample.csv && rm -rf /tmp/cookies.txt
+        ls
+        pwd
         
     - name: Install dependencies
       run: |
