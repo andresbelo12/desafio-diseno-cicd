@@ -24,6 +24,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        wget "https://drive.google.com/uc?export=download&id=1uNV9FHKqVdI5EkcZXBuuLgQw3fJ-d9Ab"
+        ls
+        pwd
         
     - name: Unit Test
       run: |
@@ -32,3 +35,4 @@ jobs:
     - name: ML Metrics Validation
       run: |
         python main.py
+    
